@@ -1,0 +1,207 @@
+/* public/css/auth/base.css */
+:root {
+    --bg-1: #ffe6f0;
+    /* 画像に近い淡ピンク */
+    --bg-2: #ffd7ec;
+    /* グラデ中ピンク */
+    --bg-3: #f6c7ef;
+    /* 濃いめ */
+    --card-bg: #fff;
+    --text: #333;
+    --muted: #888;
+    --accent: #c082d3;
+    /* ボタン等で使用予定の紫系 */
+    --radius: 24px;
+    --shadow: 0 12px 40px rgba(0, 0, 0, .08);
+}
+
+
+body.auth-body {
+    margin: 0;
+    color: var(--text, #333);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", sans-serif;
+
+    /* 薄い青紫 → 薄いオレンジ */
+    background:
+        radial-gradient(1000px 600px at 70% 10%, rgba(232, 234, 255, .65), transparent 60%),
+        linear-gradient(135deg,
+                #d5e8ff 0%,
+                /* 薄い青 */
+                #fc8787 48%,
+                /* 赤（明るめ） */
+                #f9cfa0 100%)
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+
+.auth-header {
+    padding: 16px;
+}
+
+.auth-header__inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth-logo {
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-decoration: none;
+    color: #b56ad1;
+}
+
+.auth-header__nav .header__link {
+    color: #6a5acd;
+    text-decoration: none;
+    font-size: .95rem;
+}
+
+.auth-main {
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+    padding: 40px 16px;
+}
+
+.auth-card {
+    width: min(720px, 92vw);
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 40px 32px;
+}
+
+.auth-card__head {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.auth-brand {
+    font-size: clamp(40px, 8vw, 84px);
+    /* 画面幅に応じて極大化 */
+    line-height: 1;
+    margin-bottom: 6px;
+    color: #c082d3;
+    letter-spacing: .18em;
+    font-weight: 800;
+    font-family: "Yu Mincho", "游明朝体", "Hiragino Mincho ProN", "HGS明朝E", serif;
+}
+
+.auth-title {
+    font-family: "Yu Mincho", "游明朝体", "Hiragino Mincho ProN", "HGS明朝E", serif;
+    font-size: clamp(16px, 4vw, 38px);
+    font-weight: 700;
+    letter-spacing: .04em;
+}
+.auth-step {
+    margin: 0;
+    color: var(--muted);
+font-size: clamp(16px, 3.0vw, 22px);
+font-weight: 700;
+letter-spacing: .06em;
+}
+
+.auth-card__body {
+    margin-top: 12px;
+}
+
+/* よく使うフォーム系の共通ユーティリティ */
+.form__group {
+    margin: 16px 0;
+}
+
+.form__label {
+    display: block;
+    font-size: .95rem;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.form__input {
+    width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    border: 1px solid #e6d9ef;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.form__error {
+    color: #d00;
+    font-size: .9rem;
+    margin-top: .35rem;
+    min-height: 1rem;
+}
+
+.btn {
+    display: block;
+    width: 50%;
+    height: 44px;
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+    background: linear-gradient(90deg, #b388ff, #ff8acb);
+    color: #fff;
+    margin: 16px auto 0;
+}
+
+.btn:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+/* === エラー文（共通） ===================== */
+.form__error {
+    color: #d00;
+    font-size: .9rem;
+    margin-top: .35rem;
+    min-height: 1rem;
+    /* エラーが無い時も高さを確保してレイアウト崩れ防止 */
+}
+
+.is-invalid .form__input {
+    /* 任意：入力枠も赤にしたい場合 */
+    border-color: #ff8c8c;
+}
+
+.auth-card__helper {
+    margin-top: 16px;
+    text-align: center;
+    
+}
+
+.auth-link {
+    color: #6a5acd;
+    font-size: .95rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.input-with-suffix {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.input-with-suffix .form__input {
+    flex: 1;
+    
+}
+
+.input-suffix {
+    white-space: nowrap;
+    font-size: .95rem;
+}

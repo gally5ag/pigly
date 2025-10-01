@@ -1,0 +1,145 @@
+/* -------------- 共通トークン -------------- */
+:root {
+    --bg: #f6f7fb;
+    --panel: #ffffff;
+    --ink: #2b2f33;
+    --muted: #8a9099;
+    --brand: #c69ae8;
+    /* PiGLy の淡い紫 */
+    --line: #e9eaf0;
+    --radius: 16px;
+    --shadow: 0 8px 20px rgba(25, 28, 33, .06);
+    --grad: linear-gradient(90deg, #9ea3ff 0%, #f1a1c5 100%);
+    --header-btn-w: 160px;
+    --header-btn-h: 40px;
+    --header-btn-radius: 10px;
+}
+
+/* -------------- 背景／外枠（スクショ風の白いカード） -------------- */
+.site-body {
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+}
+
+.shell {
+    padding: 32px 16px 48px;
+}
+
+.shell__inner {
+    max-width: 1470px;
+    margin: 0 auto;
+    background: var(--panel);
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+    padding: 28px 28px 40px;
+}
+
+/* -------------- ヘッダー -------------- */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 22px;
+}
+
+.brand {
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: .06em;
+    color: var(--brand);
+    text-decoration: none;
+    user-select: none;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-actions form {
+    margin: 0;
+}
+
+.site-header .btn {
+    width: var(--header-btn-w);
+    height: var(--header-btn-h);
+    border-radius: var(--header-btn-radius);
+    justify-content: center;
+    padding: 0 12px;
+    background-color: #e5e6eb;
+}
+
+.site-header .btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* -------------- ボタン（共通） -------------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .4em;
+    height: 36px;
+    padding: 0 14px;
+    font-weight: 600;
+    border-radius: 999px;
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.btn--ghost {
+    background: #fff;
+    border: 1px solid var(--line);
+    color: var(--ink);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+}
+
+.btn--ghost:hover {
+    border-color: #d9dbe2;
+}
+
+.btn--primary {
+    background: var(--grad);
+    color: #fff;
+}
+
+.btn .icon {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+}
+/* -------------- ページ領域 -------------- */
+.site-content {
+    padding-top: 18px;
+}
+
+/* -------------- 既存クラスと馴染ませるための最低限 -------------- */
+.header__link {
+  
+   
+    display: inline-flex;
+    align-items: center;
+    height: 36px;
+    padding: 0 14px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.form__error {
+    color: #d00;
+    font-size: .9rem;
+    margin-top: .35rem;
+    min-height: 1rem;
+}
+
