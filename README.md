@@ -15,9 +15,13 @@ PigLy アプリ
 12レイアウト調整
 
 使用技術
-PHP PHP 8.3.6
+PHP 8.3.6
 Laravel 8.83.8 
+laravel/fortify 1.19
 MySQL 8.0
 テストユーザー　john
 メールアドレス：test1@email.com
 パスワード：coachtech
+
+URL
+https://github.com/gally5ag/pigly.git
