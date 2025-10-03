@@ -1,1 +1,23 @@
-*.sqlite*
+cat > .gitignore <<'EOF'
+# OS/IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Node/Laravelなど
+node_modules/
+vendor/
+
+# Env
+.env
+.env.*
+
+# Logs
+storage/logs/
+bootstrap/cache/
+
+# MySQL runtime data (do not commit)
+docker/mysql/data/
+docker/mysql/logs/
+docker/mysql/tmp/
+EOF
