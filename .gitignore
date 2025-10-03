@@ -1,0 +1,3 @@
+
+# MySQL runtime data (do not commit)
+docker/mysql/data/
