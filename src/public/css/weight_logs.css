@@ -125,12 +125,15 @@
 }
 
 .modal__inner {
-    position: relative;
     width: min(720px, 100%);
+    max-height: calc(100dvh - 48px);
+    display: flex;
+    flex-direction: column;
 }
 
 .modal__content {
     background: #fff;
+    overflow: auto;
     border-radius: 14px;
     box-shadow: 0 16px 40px rgba(25, 28, 33, .16);
     padding: 20px 20px 22px;
@@ -631,8 +634,8 @@ body.modal-open {
 
 .edit-form--narrow {
     width: 100%;
-max-width: 210px;
-   
+    max-width: 210px;
+
     padding: 24px;
     background: #fff;
     border-radius: 16px;
@@ -781,7 +784,7 @@ label .req {
 .create-form label .req::before,
 .edit-form label .req::before,
 label .req::before {
-   
+
     color: #fff;
     font-size: .8rem;
     font-weight: 700;

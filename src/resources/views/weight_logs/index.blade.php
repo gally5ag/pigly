@@ -39,7 +39,7 @@
             <a href="#!" class="modal__overlay" aria-label="閉じる"></a>
             <div class="modal__inner">
                 <div class="modal__content">
-                    <h3>体重登録</h3>
+                    <h3>Weight Logを追加</h3>
 
                     <form action="{{ route('weight_logs.store') }}" method="post" class="create-form" novalidate>
                         @csrf
@@ -147,7 +147,7 @@
                 <div class="log-card__row"><span>体重</span><b>{{ number_format($log->weight,1) }}kg</b></div>
                 <div class="log-card__row"><span>摂取カロリー</span><b>{{ number_format($log->calories) }}cal</b></div>
                 <div class="log-card__row"><span>運動時間</span><b>{{ substr($log->exercise_time,0,5) }}</b></div>
-                
+
             </div>
             <a class="edit-btn" href="{{ route('weight_logs.show', $log->id) }}" aria-label="詳細">
                 <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
