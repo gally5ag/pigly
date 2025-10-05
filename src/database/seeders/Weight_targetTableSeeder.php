@@ -15,12 +15,18 @@ class Weight_targetTableSeeder extends Seeder
      */
     public function run()
     {
-        $userId = DB::table('users')->where('email', 'test@email.com')->value('id');
+        $userId = DB::table('users')->where('email', 'test1@email.com')->value('id');
+
+        if (!$userId) {
+          
+            $this->command->warn('Weight_target: target user not found. Skipped seeding.');
+            return;
+        }
 
         DB::table('weight_targets')->updateOrInsert(
             ['user_id' => $userId],
             [
-                'target_weight' => 60.0,  
+                'target_weight' => 60.0,
                 'created_at'    => now(),
                 'updated_at'    => now(),
             ]
